@@ -1,0 +1,8 @@
+{
+  "todos": [
+
+    {"id": 1, "text": "Finishing learning basic react hooks"},
+    {"id":2, "text": "Play with kids"},
+    {"id":3, "text":"Watch News"}
+  ]
+} 
