@@ -14,14 +14,6 @@ function TodoList() {
     return dispatch({ type: "delete", payload: todo_id });
   }
 
-  function handleEdit(e) {
-    const todo = e.target.value;
-
-    setTodoText(todo.text);
-    setEditMode(true);
-    setEditTodo(todo);
-  }
-
   function handleSubmit(e) {
     e.preventDefault();
 
@@ -76,7 +68,15 @@ function TodoList() {
                 <span>{todo.text}</span>
               </td>
               <td>
-                <Button variant="secondary" value={todo} onClick={handleEdit}>
+                <Button
+                  variant="secondary"
+                  value={todo}
+                  onClick={() => {
+                    setTodoText(todo.text);
+                    setEditMode(true);
+                    setEditTodo(todo);
+                  }}
+                >
                   Edit
                 </Button>
               </td>
